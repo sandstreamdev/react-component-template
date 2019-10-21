@@ -1,0 +1,92 @@
+{
+  "name": "@sandstreamdev/react-component-template",
+  "description": "Template repository for react component",
+  "keywords": [
+    "react",
+    "component",
+    "custom",
+    "template"
+  ],
+  "license": "MIT",
+  "version": "0.1.0",
+  "author": {
+    "name": "Sandstream Development",
+    "url": "https://github.com/sandstreamdev/react-component-template/graphs/contributors"
+  },
+  "homepage": "https://github.com/sandstreamdev/react-component-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandstreamdev/react-component-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sandstreamdev/react-component-template/issues"
+  },
+  "main": "dist/react-component-template.cjs.js",
+  "module": "dist/react-component-template.esm.js",
+  "browser": "dist/react-component-template.umd.js",
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@testing-library/jest-dom": "^4.1.0",
+    "@testing-library/react": "^9.1.4",
+    "autoprefixer": "^9.6.1",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "husky": "^3.0.5",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "jest-transform-css": "^2.0.0",
+    "lint-staged": "^9.2.5",
+    "prettier": "^1.18.2",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "rollup": "^1.20.3",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-local-resolve": "^1.0.7",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "stylelint": "^11.0.0",
+    "stylelint-config-standard": "^19.0.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "prepare": "npm run build",
+    "stylelint": "stylelint src/**/*.css examples/**/*.css --cache",
+    "prettier": "prettier src/**/*.js examples/**/*.js --check",
+    "test": "jest --no-cache"
+  },
+  "files": [
+    "dist"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add",
+      "jest --bail --findRelatedTests"
+    ],
+    "*.css": [
+      "stylelint --fix",
+      "git add"
+    ]
+  }
+}
