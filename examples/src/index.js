@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import styles from './app.module.css';
+import './app.css';
 import App from './App';
+import PhoneChrome from './PhoneChrome';
 
 ReactDOM.render(
-  <div className={styles.testApp}>
-    <div className={styles.smartphone}>
-      <div className={styles.content}>
-        <App />
-      </div>
-    </div>
+  <div className="test-app">
+    <PhoneChrome>
+      <App />
+    </PhoneChrome>
   </div>,
   document.getElementById('root')
 );

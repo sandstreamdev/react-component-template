@@ -65,6 +65,7 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "prepare": "npm run build",
+    "lint": "eslint ./ --ext \".js\" --max-warnings=0",
     "stylelint": "stylelint src/**/*.css examples/**/*.css --cache",
     "prettier": "prettier src/**/*.js examples/**/*.js --check",
     "test": "jest --no-cache"

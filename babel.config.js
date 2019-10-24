@@ -4,11 +4,12 @@ const presets = [
     {
       targets: {
         browsers: [
-          '>0.25%',
-          'not ie 11',
-          'not op_mini all',
-          'safari >= 11',
-          'not safari 5.1'
+          'last 2 Chrome versions',
+          'last 2 Firefox versions',
+          'last 2 Safari versions',
+          'last 2 Edge versions',
+          'last 2 ChromeAndroid versions',
+          'last 2 iOS versions'
         ],
         node: 'current'
       },
@@ -21,7 +22,6 @@ const presets = [
 const plugins = ['@babel/plugin-proposal-class-properties'];
 
 module.exports = function(api) {
-  api.cache.invalidate(() => process.env.NODE_ENV);
   const isTest = api.env('test');
 
   if (isTest) {

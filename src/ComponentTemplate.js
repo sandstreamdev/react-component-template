@@ -1,9 +1,9 @@
 import React from 'react';
 
-import styles from './ComponentTemplate.css';
+import './ComponentTemplate.css';
 
 const ComponentTemplate = () => (
-  <div className={styles.content}>
+  <div className="component-template content">
     <div>Component Template Content</div>
   </div>
 );

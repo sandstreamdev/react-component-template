@@ -1,33 +1,3 @@
-html {
-  font-family: 'Roboto', sans-serif;
-}
-
-body {
-  margin: 0;
-}
-
-h3 {
-  margin-bottom: 0;
-  text-align: center;
-}
-
-h5 {
-  margin-top: 0;
-}
-
-.testApp {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.example {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-}
-
 @media screen and (min-device-width: 1200px) {
   /* The device with borders */
   .smartphone {
@@ -70,7 +40,7 @@ h5 {
   }
 
   /* The screen (or content) of the device */
-  .smartphone .content {
+  .smartphone-content {
     width: 360px;
     height: 640px;
     background: white;

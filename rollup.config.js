@@ -17,8 +17,7 @@ const config = {
       name: pkg.name,
       globals: {
         react: 'React',
-        'react-dom': 'ReactDOM',
-        'prop-types': 'PropTypes'
+        'react-dom': 'ReactDOM'
       }
     },
     {
@@ -30,7 +29,7 @@ const config = {
       format: 'es'
     }
   ],
-  external: ['react', 'react-dom', 'prop-types'],
+  external: ['react', 'react-dom'],
   plugins: [
     peerDepsExternal(),
     postcss({
